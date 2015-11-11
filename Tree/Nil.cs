@@ -28,5 +28,11 @@ namespace Tree
         {
             return true;
         }
+
+        public Node eval (Environment e)
+        {
+            Console.Error.WriteLine("Cannot eval() a Nil node");
+            return null;
+        }
     }
 }

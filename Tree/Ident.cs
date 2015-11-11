@@ -27,6 +27,19 @@ namespace Tree
         {
             return true;
         }
+
+        public Node eval (Environment e)
+        {
+            Node val = e.lookup(this);
+            if (val == null)
+            {
+                return new StringLit("Lookup could not find a value");
+            }
+            else
+            {
+                return val;
+            }
+        }
     }
 }
 

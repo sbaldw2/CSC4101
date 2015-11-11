@@ -12,6 +12,20 @@ namespace Tree
         {
             Printer.printQuote(t, n, p);
         }
+
+        public Node eval (Node t, Environment e)
+        {
+            Node current = t.getCdr().getCar();
+            if (current == null)
+            {
+                Console.Error.WriteLine("Error: Null inside Quote");
+                return null;
+            }
+            else
+            {
+                return current;
+            }
+        }
     }
 }
 

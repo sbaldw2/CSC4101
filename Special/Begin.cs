@@ -12,6 +12,28 @@ namespace Tree
         {
             Printer.printBegin(t, n, p);
         }
+
+        public Node eval (Node t, Environment e)
+        {
+            Node cdr = t.getCdr();
+            if (cdr == null)
+            {
+                Console.Error.WriteLine("Error: Begin is null (cdr)");
+                return null;
+            }
+
+            Node car = evalCdr(cdr, null, e);
+            if (car == null)
+            {
+                Console.Error.WriteLine("Error: Begin is null (car)");
+            }
+            return car;
+        }
+
+        private Node evalCdr (Node cdr, Node final, Environment e)
+        {
+            return null; // figure out what this acxtually does. see josh code.
+        }
     }
 }
 

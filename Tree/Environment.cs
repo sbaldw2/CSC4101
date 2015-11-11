@@ -105,13 +105,32 @@ namespace Tree
 
         public void define(Node id, Node val)
         {
-            // TODO: implement this function
+            Node definition = new Cons(id, new Cons(val, Nil.getInstance()));
+            this.frame = new Cons(definition, this.frame);
         }
 
 
         public void assign(Node id, Node val)
         {
-            // TODO: implement this function
+            if (this.lookup(id) != null)
+            {
+                find(id, this.frame).setCar(val);
+            }
+            else
+            {
+                Console.Error.WriteLine("Cannot find " + id.getName());
+            }
+        }
+
+        public Boolean isEnvironment()
+        {
+            return true;
+        }
+
+        public Node eval (Environment e)
+        {
+            Console.Error.WriteLine("Cannot call eval() on an Environment");
+            return null;
         }
     }
 }

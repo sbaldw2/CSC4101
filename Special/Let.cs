@@ -4,7 +4,7 @@ using System;
 
 namespace Tree
 {
-    public class Let : Special
+    public class Let : Special // what this do
     {
 	public Let() { }
 

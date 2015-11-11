@@ -22,6 +22,11 @@ namespace Tree
         {
             return true;
         }
+
+        public Node eval (Environment e)
+        {
+            return this;
+        }
     }
 }
 

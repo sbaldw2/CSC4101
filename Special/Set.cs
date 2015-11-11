@@ -12,6 +12,21 @@ namespace Tree
         {
             Printer.printSet(t, n, p);
         }
+
+        public Node eval (Node t, Environment e)
+        {
+            Node current = t.getCdr().getCar();
+            if (!current.isSymbol())
+            {
+                Console.Error.WriteLine("Error: Not an identifier");
+                return null;
+            }
+            // insert some methods about env, kinda confusing/binding stuff
+            Node final = t.getCdr().getCdr().getCar();
+            final = final.eval(final, e);
+            e.assign(current, final);
+            return new StringLit("; " + current.getName() + " - updated.");
+        }
     }
 }
 
