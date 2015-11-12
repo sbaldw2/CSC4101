@@ -19,7 +19,7 @@ namespace Tree
             if (current == null)
             {
                 Console.Error.WriteLine("Error: Null inside Quote");
-                return null;
+                return Nil.getInstance();
             }
             else
             {

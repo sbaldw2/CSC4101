@@ -81,7 +81,7 @@ namespace Tree
         public Node eval (Environment e) // what is dis for
         {
             Console.Error.WriteLine("Called eval() on wrong node");
-            return null;
+            return Nil.getInstance();
         }
 
         public Node eval (Node t, Environment e) // and dis

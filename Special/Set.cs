@@ -19,7 +19,7 @@ namespace Tree
             if (!current.isSymbol())
             {
                 Console.Error.WriteLine("Error: Not an identifier");
-                return null;
+                return Nil.getInstance();
             }
             // insert some methods about env, kinda confusing/binding stuff
             Node final = t.getCdr().getCdr().getCar();

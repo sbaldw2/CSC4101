@@ -20,7 +20,7 @@ namespace Tree
             {
                 Console.Error.WriteLine("Error: Cond is null");
             }
-            return null;
+            return Nil.getInstance();
         }
     }
 }

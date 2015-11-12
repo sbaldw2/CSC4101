@@ -13,13 +13,13 @@ namespace Tree
             Printer.printIf(t, n, p);
         }
 
-        public Node eval (Node t, Environment e)
+        /**public Node eval (Node t, Environment e)
         {
             Node check = t.getCdr().getCar();
             check = check.eval(check, e);
             Node final = null;
             if (check instanceof BooleanLit) 
         }
-    }
+    */}
 }
 

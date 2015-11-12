@@ -130,7 +130,7 @@ namespace Tree
         public Node eval (Environment e)
         {
             Console.Error.WriteLine("Cannot call eval() on an Environment");
-            return null;
+            return Nil.getInstance();
         }
     }
 }

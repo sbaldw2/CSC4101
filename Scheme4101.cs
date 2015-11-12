@@ -51,10 +51,12 @@ public class Scheme4101
 
         // TODO: Create and populate the built-in environment and
         // create the top-level environment
-
-        // Read-eval-print loop
-
-        // TODO: print prompt and evaluate the expression
+        var env = new Tree.Environment(); // create built in environment for scheme functions
+        var id = new Ident("car");
+        // TODO: create lines for definitions of built in functions from first page of docs
+        id = new Ident("b+");
+        env.define(id, new BuiltIn(id)); // populates environment--puts car into built in environment--define manages tree for you
+        env = new Tree.Environment(env); // 
         root = (Node) parser.parseExp();
         while (root != null) 
         {
