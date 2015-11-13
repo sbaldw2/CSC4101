@@ -4,7 +4,7 @@ using System;
 
 namespace Tree
 {
-    public class Cons : Node
+    public class Cons : Node // DONE
     {
         private Node car;
         private Node cdr;
@@ -88,6 +88,11 @@ namespace Tree
         public override bool isPair()
         {
             return true;
+        }
+
+        public Node eval (Node t, Environment e)
+        {
+            return form.eval(t, e);
         }
     }
 }

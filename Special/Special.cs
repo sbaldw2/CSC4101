@@ -8,9 +8,14 @@ namespace Tree
     // hierarchy.  We'll discuss some of them in class.  The easiest solution
     // is to not add any fields and to use empty constructors.
 
-    abstract public class Special
+    abstract public class Special // DONE
     {
         public abstract void print(Node t, int n, bool p);
+
+        public Node eval (Node t, Environment e)
+        {
+            return null;
+        }
     }
 
 }

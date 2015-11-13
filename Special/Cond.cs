@@ -4,8 +4,8 @@ using System;
 
 namespace Tree
 {
-    public class Cond : Special // we need to have the mechanics of this explained
-    { // this method makes ZERO sense to me.
+    public class Cond : Special // TODO
+    { 
 	public Cond() { }
 
         public override void print(Node t, int n, bool p)

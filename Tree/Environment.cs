@@ -33,7 +33,7 @@ using System;
 
 namespace Tree
 {
-    public class Environment : Node
+    public class Environment : Node // DONE
     {
         // An Environment is implemented like a Cons node, in which
         // every list element (every frame) is an association list.
@@ -105,8 +105,16 @@ namespace Tree
 
         public void define(Node id, Node val)
         {
-            Node definition = new Cons(id, new Cons(val, Nil.getInstance()));
-            this.frame = new Cons(definition, this.frame);
+            Node definition = find(id, frame);
+            if (definition != null)
+            {
+                definition.setCar(val);
+            }
+            else
+            {
+                Node frame = new Cons(id, new Cons(val, Nil.getInstance()));
+                this.frame = new Cons(frame, this.frame);
+            }
         }
 
 
@@ -127,10 +135,5 @@ namespace Tree
             return true;
         }
 
-        public Node eval (Environment e)
-        {
-            Console.Error.WriteLine("Cannot call eval() on an Environment");
-            return Nil.getInstance();
-        }
     }
 }

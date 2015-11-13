@@ -4,7 +4,7 @@ using System;
 
 namespace Tree
 {
-    public class Define : Special // do not understand this either, at all 
+    public class Define : Special // TODO
     {
 	public Define() { }
 

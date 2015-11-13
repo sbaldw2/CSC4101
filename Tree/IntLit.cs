@@ -4,7 +4,7 @@ using System;
 
 namespace Tree
 {
-    public class IntLit : Node
+    public class IntLit : Node // DONE
     {
         private int intVal;
 
@@ -27,5 +27,11 @@ namespace Tree
         {
             return this;
         }
+
+        public int getVal()
+        {
+            return intVal;
+        }
+
     }
 }

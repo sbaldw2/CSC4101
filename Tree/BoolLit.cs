@@ -4,7 +4,7 @@ using System;
 
 namespace Tree
 {
-    public class BoolLit : Node
+    public class BoolLit : Node // DONE
     {
         private bool boolVal;
   
@@ -32,11 +32,6 @@ namespace Tree
         public override bool isBool()
         {
             return true;
-        }
-
-        public Node eval (Environment e)
-        {
-            return this;
         }
 
         public Boolean getVal()

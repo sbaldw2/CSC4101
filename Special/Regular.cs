@@ -4,7 +4,7 @@ using System;
 
 namespace Tree
 {
-    public class Regular : Special // ask about this 
+    public class Regular : Special // TODO
     {
         public Regular() { }
 

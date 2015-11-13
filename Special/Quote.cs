@@ -4,7 +4,7 @@ using System;
 
 namespace Tree
 {
-    public class Quote : Special
+    public class Quote : Special // DONE
     {
 	public Quote() { }
 
@@ -16,14 +16,14 @@ namespace Tree
         public Node eval (Node t, Environment e)
         {
             Node current = t.getCdr().getCar();
-            if (current == null)
+            if (current != null)
             {
-                Console.Error.WriteLine("Error: Null inside Quote");
-                return Nil.getInstance();
+                return current;
             }
             else
             {
-                return current;
+                Console.Error.WriteLine("Error: Null inside Quote");
+                return Nil.getInstance();
             }
         }
     }

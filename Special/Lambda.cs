@@ -4,7 +4,7 @@ using System;
 
 namespace Tree
 {
-    public class Lambda : Special
+    public class Lambda : Special // DONE
     {
 	public Lambda() { }
 

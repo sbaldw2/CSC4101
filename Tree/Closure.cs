@@ -13,7 +13,7 @@ using System;
 
 namespace Tree
 {
-    public class Closure : Node
+    public class Closure : Node //TODO
     {
         private Node fun;		// a lambda expression
         private Environment env;	// the environment in which
